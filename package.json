@@ -1,0 +1,31 @@
+{
+  "name": "api-url-switch",
+  "version": "1.0.0",
+  "description": "Angular Environment API URL Switch ",
+  "main": "index.js",
+  "bin": {
+    "api-url-switch": "./index.js"
+  },
+  "scripts": {
+    "test": "test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shrisowdhaman/api-url-switch.git"
+  },
+  "keywords": [
+    "api",
+    "url",
+    "prod build apu url swith"
+  ],
+  "author": "Shrisowdhaman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shrisowdhaman/api-url-switch/issues"
+  },
+  "homepage": "https://github.com/shrisowdhaman/api-url-switch#readme",
+  "dependencies": {
+    "npm-dir": "0.1.0"
+  },
+  "devDependencies": {}
+}
