@@ -14,31 +14,33 @@ var srcFile = '';
 var descFile = '';
 
 // Directory home path
-const distDirPath = path.join(__dirname, '/dist/');
+const distDirPath = path.resolve('./dist/');
 
 // Get content from file
 var API_URL_CONFIG;
 // Define to JSON type
 var apiUrlConfig;
-
+ 
+ 
 // Check api_url_config.json file
-if (fs.existsSync(__dirname + "/api_url_config.json")) {
+if (fs.existsSync(path.resolve("./api_url_config.json"))) {
 
-    API_URL_CONFIG = fs.readFileSync(__dirname + "/api_url_config.json")
+    API_URL_CONFIG = fs.readFileSync(path.resolve("./api_url_config.json"));
     apiUrlConfig = JSON.parse(API_URL_CONFIG);
     srcFile = apiUrlConfig.src_api;
     descFile = apiUrlConfig.desc_api;
-} else if (process.argv.length == 3) {
+} else if (process.argv.length == 4) {
     srcFile = process.argv[2];
     descFile = process.argv[3];
 } else {
+	console.log('Something wrong not able to process');
     process.ex;
 }
 
-var filePath = '';
+var fileName = '';
 // File the filepath
 fs.readdir(distDirPath, function (err, content) {
-    filePath = content.find(res => res.match(/main.*.js/))
+    fileName = content.find(res => res.match(/main.*.js/))
 });
 
 // Replace main file and replacethe file
@@ -47,12 +49,15 @@ dir.readFiles(distDirPath, {
     exclude: /^\./
 }, function (err, content, next) {
     if (err) throw err;
+	console.log(path.resolve(distDirPath,fileName));
     // Replace logic
     if (srcFile && descFile) {
         var result = replaceAll(srcFile, descFile, content);
-        fs.writeFile(distDirPath + filePath, result, 'utf8', function (err) {
+        fs.writeFile(path.resolve(distDirPath, fileName), result, 'utf8', function (err) {
             if (err) {
                 return console.log(err);
+            }else {
+                console.log('API URL switch from ',srcFile, 'to', descFile); 
             };
         });
     } else {
@@ -67,5 +72,5 @@ function replaceAll(find, replace, content) {
     while (content.indexOf(find) > -1) {
         content = content.replace(find, replace);
     }
-    return content;
+   return content;
 }
