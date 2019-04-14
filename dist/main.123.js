@@ -1,1 +1,1 @@
-api_url: "http://www.yahoocl.com"
+api_url: "http://www.google.com"
