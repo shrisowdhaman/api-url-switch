@@ -28,7 +28,7 @@ if (fs.existsSync(__dirname + "/api_url_config.json")) {
     apiUrlConfig = JSON.parse(API_URL_CONFIG);
     srcFile = apiUrlConfig.src_api;
     descFile = apiUrlConfig.desc_api;
-} else if (process.argv.length == 4) {
+} else if (process.argv.length == 3) {
     srcFile = process.argv[2];
     descFile = process.argv[3];
 } else {
