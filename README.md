@@ -29,10 +29,7 @@ $ npm install -g api-url-switch
      "qa": {
         "src_api": "url2",
         "desc_api": "desc-url2"
-     },
-
-     "src_api": "url3",
-     "desc_api": "desc-url3"
+     } 
     }
     
    ```
