@@ -1,5 +1,6 @@
 
-#api-url-switch
+#api-url-switch#
+
 Angular - Switch API_URL 
 
 This npm module helps to switch API_URL in compiled source. After prod build this module help to switch api_url an 
