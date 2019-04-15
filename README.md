@@ -14,15 +14,38 @@ $ npm install -g api-url-switch
     $ api-url-switch url1 url2
 
 # Process 2 - via JSON file
+
  1. Create new file named as 'api_url_config.json'
  2. api_url_config.json - file name
+ 
+   Type 1 - Multiple environemnt 
+   ```
      {
-         "src_api": 'url1',
-         "desc_api": 'url2'
+     "dev": {
+         "src_api": "url1",
+         "desc_api": "aaaaaaaaaaaaaaaaaaaaa"
+     },
+     "qa": {
+        "src_api": "url2",
+        "desc_api": "qqqqqqqqqqqqqqqqqqqqqqqq"
+     },
+
+     "src_api": "url3",
+     "desc_api": "qqqqqqqqqqqqqqqqqqqqqqqq"
+    }
+    
+   ```
+    dev : api-url-switch dev 
+    qa: api-url-switch qa 
+    
+   Type 2 - Single environment 
+   ```
+     {
+       "src_api": "url3",
+       "desc_api": "qqqqqqqqqqqqqqqqqqqqqqqq"
      }
- 3. api-url-switch - run command
-
-
-## How It Works
-
+    
+    api-url-switch 
+  
+     
 
