@@ -24,15 +24,15 @@ $ npm install -g api-url-switch
      {
      "dev": {
          "src_api": "url1",
-         "desc_api": "aaaaaaaaaaaaaaaaaaaaa"
+         "desc_api": "desc-url1"
      },
      "qa": {
         "src_api": "url2",
-        "desc_api": "qqqqqqqqqqqqqqqqqqqqqqqq"
+        "desc_api": "desc-url2"
      },
 
      "src_api": "url3",
-     "desc_api": "qqqqqqqqqqqqqqqqqqqqqqqq"
+     "desc_api": "desc-url3"
     }
     
    ```
@@ -42,10 +42,10 @@ $ npm install -g api-url-switch
    Type 2 - Single environment 
    ```
      {
-       "src_api": "url3",
-       "desc_api": "qqqqqqqqqqqqqqqqqqqqqqqq"
+       "src_api": "url",
+       "desc_api": "desc-url"
      }
-    
+    ```
     api-url-switch 
   
      
