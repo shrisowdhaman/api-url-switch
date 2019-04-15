@@ -1,4 +1,13 @@
 {
- "src_api": "url1",
- "desc_api": "url2"
+ "dev": {
+     "src_api": "url1",
+     "desc_api": "aaaaaaaaaaaaaaaaaaaaa"
+ },
+ "qa": {
+    "src_api": "url2",
+    "desc_api": "qqqqqqqqqqqqqqqqqqqqqqqq"
+ },
+
+ "src_api": "url3",
+ "desc_api": "qqqqqqqqqqqqqqqqqqqqqqqq"
 }
