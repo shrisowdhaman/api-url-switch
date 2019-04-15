@@ -11,10 +11,10 @@ $ npm install -g api-url-switch
 
 ## Run
 
-# Process 1 - terminal 
+### Process 1 - terminal 
     $ api-url-switch url1 url2
 
-# Process 2 - via JSON file
+### Process 2 - via JSON file
 
  1. Create new file named as 'api_url_config.json'
  2. api_url_config.json - file name
