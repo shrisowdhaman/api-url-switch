@@ -23,11 +23,12 @@ var apiUrlConfig;
  
  
 // Check api_url_config.json file
-if (fs.existsSync(path.resolve("./api_url_config.json"))) {
+if (fs.existsSync(path.resolve("./api_url_config1.json"))) {
 
     API_URL_CONFIG = fs.readFileSync(path.resolve("./api_url_config.json"));
     apiUrlConfig = JSON.parse(API_URL_CONFIG);
-    const mode = process.argv[2];  
+    const mode = process.argv[2];     
+
     if(mode) { 
         srcFile = apiUrlConfig[mode].src_api;
         descFile = apiUrlConfig[mode].desc_api;
@@ -40,8 +41,16 @@ if (fs.existsSync(path.resolve("./api_url_config.json"))) {
     srcFile = process.argv[2];
     descFile = process.argv[3];
 } else {
-	console.log('Something went wrong. Please check');
-    process.ex;
+     // Read the variable from Environmentvariable 
+     srcFile = process.env.src_api;
+     descFile = process.env.desc_api;
+
+     console.log(srcFile);
+     // Process kills when src and desc is null
+     if(!srcFile && !descFile ) {
+        console.log('Something went wrong. Please check');
+        process.ex;
+     }	
 }
 
 var fileName = '';
