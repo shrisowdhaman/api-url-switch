@@ -1,6 +1,6 @@
 {
   "name": "api-url-switch",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Angular Environment API URL Switch ",
   "main": "index.js",
   "bin": {
